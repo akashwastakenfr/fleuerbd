@@ -1,0 +1,70 @@
+<section class="relative w-full h-[100vh] overflow-hidden">
+  <div
+    id="carousel"
+    class="flex transition-transform duration-700 ease-in-out w-[200%] h-full"
+  >
+    <!-- Slide 1 -->
+    <div class="relative w-1/2 h-full sm:w-1/2">
+      <img src="/image2.jpg" alt="Image 2" class="w-full h-full object-cover" />
+      <div
+        class="absolute inset-0 flex flex-col justify-center items-center sm:items-start text-center sm:text-left text-white bg-black/30 p-6 sm:p-10 md:p-16"
+      >
+        <h1
+          class="text-[#38250E] sourcify text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6"
+        >
+          Your Headline Here
+        </h1>
+        <p
+          class="text-[#38250E] anonify text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-8 max-w-full sm:max-w-lg md:max-w-xl"
+        >
+          A light description goes here
+        </p>
+        <a
+          href="/shop"
+          class="bg-[#FFD4EF] text-[#38250E] px-8 py-4 sm:px-6 sm:py-3 md:px-6 md:py-3 border-black border-[1px] text-lg sm:text-base md:text-lg transition hover:bg-[#FFC0E0]"
+        >
+          Shop Now
+        </a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="relative w-1/2 h-full sm:w-1/2">
+      <img src="/image3.jpg" alt="Image 3" class="w-full h-full object-cover" />
+      <div
+        class="absolute inset-0 flex flex-col justify-center items-center sm:items-start text-center sm:text-left text-white bg-black/30 p-6 sm:p-10 md:p-16"
+      >
+        <h1
+          class="text-[#38250E] sourcify text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6"
+        >
+          Another Headline
+        </h1>
+        <p
+          class="text-[#38250E] anonify text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-8 max-w-full sm:max-w-lg md:max-w-xl"
+        >
+          Another light description
+        </p>
+        <a
+          href="/shop"
+          class="bg-[#FFD4E5] text-[#38250E] px-8 py-4 sm:px-6 sm:py-3 md:px-6 md:py-3 border-black border-[1px] text-lg sm:text-base md:text-lg transition hover:bg-[#FFC0D5]"
+        >
+          Shop Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const carousel = document.getElementById("carousel");
+  const totalSlides = 2;
+  let index = 0;
+
+  function showSlide(i: number) {
+    if (!carousel) return;
+    index = (i + totalSlides) % totalSlides;
+    carousel.style.transform = `translateX(-${index * (100 / totalSlides)}%)`;
+  }
+
+  setInterval(() => showSlide(index + 1), 5000);
+</script>

@@ -1,0 +1,177 @@
+---
+
+---
+
+<!-- Top Banner -->
+<a
+  href="/shop"
+  class="w-full h-[39px] bg-[#FED3E4] flex items-center justify-center text-[#38250E] sourcify anonify group text-sm sm:text-base"
+>
+  <span class="hover:underline"> New arrivals are here! </span>
+  <i
+    class="text-[12px] sm:text-[14px] fa-solid fa-arrow-right pl-2 pt-0.5 transition-transform duration-150 group-hover:scale-x-110"
+  ></i>
+</a>
+
+<!-- Navbar -->
+<nav
+  class="bg-[#FFFEF8] shadow-sm px-4 sm:px-8 py-4 sm:py-8 flex items-center relative z-20"
+>
+  <!-- Logo -->
+  <a
+    href="/"
+    class="transition-transform duration-100 hover:scale-110 flex items-center"
+  >
+    <div class="hover:border hover:border-gray-900 p-1">
+      <img src="/fleurlogo.png" alt="Logo" class="h-7 w-24 sm:w-28 block" />
+    </div>
+  </a>
+
+  <!-- Desktop Links -->
+  <div
+    class="hidden md:flex gap-4 md:gap-6 ml-8 md:ml-16 text-gray-800 font-medium"
+  >
+    <a
+      href="/"
+      class="transition-transform duration-100 hover:scale-110 text-sm md:text-base anonify"
+      >Home</a
+    >
+    <a
+      href="/shop"
+      class="transition-transform duration-100 hover:scale-110 text-sm md:text-base anonify"
+      >Shop</a
+    >
+    <a
+      href="/about"
+      class="transition-transform duration-100 hover:scale-110 text-sm md:text-base anonify"
+      >About</a
+    >
+    <a
+      href="/review"
+      class="transition-transform duration-100 hover:scale-110 text-sm md:text-base anonify"
+      >Review</a
+    >
+  </div>
+
+  <div class="flex-1"></div>
+
+  <!-- Icons -->
+  <div class="flex gap-2 sm:gap-4 items-center">
+    <button id="searchBtn">
+      <i
+        class="fa-solid fa-magnifying-glass text-gray-700 text-lg transition-transform duration-100 hover:scale-110"
+      ></i>
+    </button>
+
+    <a
+      href="/account"
+      class="transition-transform duration-100 hover:scale-110"
+    >
+      <i class="fa-regular fa-user text-lg"></i>
+    </a>
+
+    <a href="/cart" class="transition-transform duration-100 hover:scale-110">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-6 w-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 
+        1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 
+        1.125 0 0 1-1.12-1.243l1.264-12A1.125 
+        1.125 0 0 1 5.513 7.5h12.974c.576 
+        0 1.059.435 1.119 1.007ZM8.625 
+        10.5a.375.375 0 1 1-.75 0 
+        .375.375 0 0 1 .75 0Zm7.5 
+        0a.375.375 0 1 1-.75 0 
+        .375.375 0 0 1 .75 0Z"
+        ></path>
+      </svg>
+    </a>
+
+    <!-- Mobile Hamburger -->
+    <button id="mobileMenuBtn" class="md:hidden ml-2">
+      <i class="fa-solid fa-bars text-lg text-gray-700"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobileMenu"
+    class="hidden absolute top-full left-0 w-full bg-[#FFFEF8] shadow-md md:hidden flex flex-col py-4 gap-2"
+  >
+    <a href="/" class="px-4 py-2 hover:bg-gray-100 anonify">Home</a>
+    <a href="/shop" class="px-4 py-2 hover:bg-gray-100 anonify">Shop</a>
+    <a href="/about" class="px-4 py-2 hover:bg-gray-100 anonify">About</a>
+    <a href="/review" class="px-4 py-2 hover:bg-gray-100 anonify">Review</a>
+  </div>
+</nav>
+
+<!-- Search Overlay -->
+<div
+  id="overlay"
+  class="hidden absolute left-0 top-0 w-full bg-white shadow-md z-30"
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-6 flex items-center relative">
+    <div class="relative w-full flex items-center">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder=" "
+        class="peer anonify text-base w-full border border-gray-300 px-4 sm:px-6 py-2 sm:py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-gray-800 shadow-sm"
+      />
+      <label
+        for="searchInput"
+        class="text-[#B3AB9F] py-1 anonify absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 text-sm transition-all duration-500 ease-in-out
+             peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-sm
+             peer-focus:top-0.5 peer-focus:-translate-y-0.5 peer-focus:text-xs peer-focus:text-[#B3AB9F]"
+      >
+        Search
+      </label>
+      <button
+        class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+      >
+        <i class="fa-solid fa-magnifying-glass text-lg"></i>
+      </button>
+    </div>
+    <button
+      id="closeOverlay"
+      class="ml-3 text-gray-400 hover:text-gray-600 px-2 flex-shrink-0"
+    >
+      <i class="fa-solid fa-xmark text-xl"></i>
+    </button>
+  </div>
+</div>
+
+<script>
+  const searchBtn = document.getElementById("searchBtn");
+  const overlay = document.getElementById("overlay");
+  const closeOverlay = document.getElementById("closeOverlay");
+  const searchInput = document.getElementById("searchInput");
+  const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  searchBtn?.addEventListener("click", () =>
+    overlay?.classList.remove("hidden")
+  );
+  closeOverlay?.addEventListener("click", () => {
+    overlay?.classList.add("hidden");
+    if (searchInput instanceof HTMLInputElement) searchInput.value = "";
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      overlay?.classList.add("hidden");
+      if (searchInput instanceof HTMLInputElement) searchInput.value = "";
+    }
+  });
+
+  mobileMenuBtn?.addEventListener("click", () =>
+    mobileMenu?.classList.toggle("hidden")
+  );
+</script>
